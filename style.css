@@ -10,12 +10,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  color: #222;
-  background-color: #f4f7f6;
+  color: #222; /* unified text color */
+  background-color: #f4f7f6; /* unified background */
 }
 
 header {
-  background-color: #005a4c;
+  background-color: #005a4c; /* unified primary */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -28,10 +28,10 @@ header {
 
 .logo img {
   height: 80px;
-  background: #26bfa6;
-  padding: 5px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #26bfa6; /* unified accent */
+  padding: 5px;      /* Add spacing around logo */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Subtle shadow for separation */
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #26bfa6;
+  color: #26bfa6; /* unified accent */
 }
 
 /* Hero Section */
@@ -75,7 +75,7 @@ nav ul li a:hover {
 }
 
 .cta-btn {
-  background-color: #26bfa6;
+  background-color: #26bfa6; /* unified accent */
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 30px;
@@ -86,7 +86,7 @@ nav ul li a:hover {
 }
 
 .cta-btn:hover {
-  background-color: #00897b;
+  background-color: #00897b; /* unified button hover */
 }
 
 /* Why Choose Us */
@@ -101,7 +101,7 @@ nav ul li a:hover {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #005a4c;
+  color: #005a4c; /* unified primary */
 }
 
 .features {
@@ -112,7 +112,7 @@ nav ul li a:hover {
 }
 
 .feature {
-  background-color: #e6f4f1;
+  background-color: #e6f4f1; /* unified card background */
   padding: 2rem;
   border-radius: 10px;
   width: 280px;
@@ -126,7 +126,7 @@ nav ul li a:hover {
 
 .feature i {
   font-size: 3rem;
-  color: #26bfa6;
+  color: #26bfa6; /* unified accent */
   margin-bottom: 1rem;
 }
 
@@ -134,17 +134,17 @@ nav ul li a:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #005a4c;
+  color: #005a4c; /* unified primary */
 }
 
 .feature p {
   font-size: 1rem;
-  color: #222;
+  color: #222; /* unified text */
 }
 
 /* Testimonials */
 .testimonials {
-  background-color: #005a4c;
+  background-color: #005a4c; /* unified primary */
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -165,7 +165,7 @@ nav ul li a:hover {
 }
 
 .testimonial {
-  background-color: #00897b;
+  background-color: #00897b; /* unified button hover */
   padding: 2rem;
   border-radius: 10px;
   width: 300px;
@@ -183,8 +183,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #00382c;
-  color: #26bfa6;
+  background-color: #00382c; /* unified footer */
+  color: #26bfa6; /* unified accent */
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
@@ -196,12 +196,15 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  
   nav ul {
     gap: 1rem;
   }
+  
   .hero-text h1 {
     font-size: 2.25rem;
   }
+  
   .hero-text p {
     font-size: 1.1rem;
   }
@@ -210,13 +213,13 @@ footer {
 /* CONTACT SECTION */
 .contact {
   padding: 60px 20px;
-  background-color: #e6f4f1;
+  background-color: #e6f4f1; /* unified card background */
   text-align: center;
 }
 
 .contact h2 {
   font-size: 28px;
-  color: #005a4c;
+  color: #005a4c; /* unified primary */
   margin-bottom: 40px;
 }
 
@@ -235,17 +238,17 @@ footer {
 
 .contact-info p {
   margin: 10px 0;
-  color: #222;
+  color: #222; /* unified text */
 }
 
 .contact-info i {
-  color: #26bfa6;
+  color: #26bfa6; /* unified accent */
   margin-right: 10px;
 }
 
 .contact-info a {
   text-decoration: none;
-  color: #26bfa6;
+  color: #26bfa6; /* unified accent */
 }
 
 .contact-form {
@@ -266,7 +269,7 @@ footer {
 
 .contact-form button {
   padding: 12px;
-  background-color: #26bfa6;
+  background-color: #26bfa6; /* unified accent */
   color: white;
   border: none;
   border-radius: 8px;
@@ -275,18 +278,18 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #00897b;
+  background-color: #00897b; /* unified button hover */
 }
 
 .contact-options {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f7f6;
+  background-color: #f4f7f6; /* unified background */
 }
 
 .contact-options h2 {
   font-size: 28px;
-  color: #005a4c;
+  color: #005a4c; /* unified primary */
   margin-bottom: 30px;
 }
 
@@ -299,8 +302,8 @@ footer {
 
 .contact-option {
   background-color: #fff;
-  border: 2px solid #26bfa6;
-  color: #26bfa6;
+  border: 2px solid #26bfa6; /* unified accent */
+  color: #26bfa6; /* unified accent */
   border-radius: 12px;
   padding: 25px 35px;
   font-size: 18px;
@@ -318,51 +321,48 @@ footer {
 }
 
 .contact-option:hover {
-  background-color: #26bfa6;
+  background-color: #26bfa6; /* unified accent */
   color: white;
 }
 
 .map-section {
   padding: 40px 20px;
-  background-color: #e6f4f1;
+  background-color: #e6f4f1; /* unified card background */
   text-align: center;
 }
 
 .map-address p {
   font-size: 16px;
-  color: #222;
+  color: #222; /* unified text */
   margin-top: 15px;
 }
-
-.university-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  max-width: 500px;
-  margin: auto;
+  font-size: 1rem;
+  color: #333;
 }
 
-.uni-button {
-  background-color: #26bfa6;
+/* Testimonials */
+.testimonials {
+  background-color: #004d40;
   color: white;
-  padding: 15px 25px;
-  text-decoration: none;
+  padding: 4rem 2rem;
   text-align: center;
-  border-radius: 10px;
-  font-size: 18px;
-  transition: background 0.3s ease;
 }
 
-.uni-button:hover {
-  background-color: #00897b;
+.testimonials h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
-.uni-logo {
-  max-width: 200px;
-  margin: 20px auto;
-  display: block;
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
+
+.testimonial {
   background-color: #00796b;
   padding: 2rem;
   border-radius: 10px;
@@ -563,4 +563,54 @@ footer {
   max-width: 200px;
   margin: 20px auto;
   display: block;
+}
+
+/* Dropdown base */
+.nav-links li {
+  position: relative;
+}
+
+/* First level dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Sub-dropdown inside */
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sub-dropdown:hover .sub-menu {
+  display: block;
+}
+
+/* Styling links */
+.dropdown-menu a, .sub-menu a {
+  color: #000;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover, .sub-menu a:hover {
+  background-color: #f0f0f0;
 }

@@ -16,7 +16,28 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="universities.html">Universities</a></li>
+<li class="dropdown">
+  <a href="#">Universities</a>
+  <ul class="dropdown-menu">
+    <li class="sub-dropdown">
+      <a href="#">Turkey</a>
+      <ul class="sub-menu">
+        <li><a href="public-turkey.html">Public Universities</a></li>
+        <li><a href="private-turkey.html">Private Universities</a></li>
+      </ul>
+    </li>
+    <!-- You can add more countries like this -->
+    <!--
+    <li class="sub-dropdown">
+      <a href="#">Germany</a>
+      <ul class="sub-menu">
+        <li><a href="public-germany.html">Public</a></li>
+        <li><a href="private-germany.html">Private</a></li>
+      </ul>
+    </li>
+    -->
+  </ul>
+</li>
         <li><a href="explore.html">Explore</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -72,7 +93,7 @@
   <div class="contact-container">
     <div class="contact-info">
       <p><i class="fas fa-map-marker-alt"></i> Istanbul, Türkiye</p>
-      <p><i class="fas fa-phone"></i> <a href="tel:+905551112233">+90 555 111 22 33</a></p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+90538">+90 555 111 22 33</a></p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:info@kolaelbahari.com">info@kolaelbahari.com</a></p>
     </div>
     <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
