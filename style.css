@@ -11,7 +11,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: #222; /* unified text color */
-  background-color: #f4f7f6; /* unified background */
+  background-color: #0b3829; /* unified background */
+  overflow-x: hidden;
 }
 
 header {
@@ -28,7 +29,7 @@ header {
 
 .logo img {
   height: 80px;
-  background: #26bfa6; /* unified accent */
+  background: #ffffff; /* unified accent */
   padding: 5px;      /* Add spacing around logo */
   border-radius: 10px; /* Rounded corners for aesthetics */
   box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Subtle shadow for separation */
@@ -336,9 +337,7 @@ footer {
   color: #222; /* unified text */
   margin-top: 15px;
 }
-  font-size: 1rem;
-  color: #333;
-}
+  
 
 /* Testimonials */
 .testimonials {
@@ -535,7 +534,17 @@ footer {
   margin-top: 15px;
 }
 
+main h1 {
+  color: #ffffff;
+  background: linear-gradient(rgba(0,90,76,0.85), rgba(0,90,76,0.85));
+  margin-bottom: 6rem 2rem;
+  text-align: center;
+  background-color: #0a0606;
+}
 .university-list {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -567,7 +576,7 @@ footer {
 
 /* Dropdown base */
 .nav-links li {
-  position: relative;
+  position: absolute;
 }
 
 /* First level dropdown */
@@ -586,7 +595,7 @@ footer {
 
 /* Sub-dropdown inside */
 .sub-dropdown {
-  position: relative;
+  position: absolute;
 }
 
 .sub-menu {
@@ -613,4 +622,69 @@ footer {
 
 .dropdown-menu a:hover, .sub-menu a:hover {
   background-color: #f0f0f0;
+}
+
+/* === Karabük University Page Styling === */
+
+.university-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.university-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.uni-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.uni-logo img {
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.programs {
+  background-color: #e6f0ff;
+  padding: 1.5rem;
+  border-left: 5px solid #003366;
+  border-radius: 10px;
+}
+
+.programs h2 {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.programs ul {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+}
+
+.programs li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
