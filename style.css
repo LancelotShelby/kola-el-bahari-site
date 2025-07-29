@@ -1,4 +1,22 @@
-/* style.css */
+/* Unified Color Palette */
+:root {
+  --primary: #005a4c;
+  --primary-dark: #00382c;
+  --primary-darker: #00251a;
+  --accent: #26bfa6;
+  --accent-dark: #00897b;
+  --accent-light: #e6f4f1;
+  --background: #0b3829;
+  --background-light: #f4f7f6;
+  --background-lighter: #f9f9f9;
+  --card-bg: #fff;
+  --card-bg-alt: #e6f4f1;
+  --text: #222;
+  --text-light: #fff;
+  --text-muted: #a5d6a7;
+  --heading: #003366;
+  --border: #ccc;
+}
 
 /* Reset some basics */
 * {
@@ -10,14 +28,14 @@
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  color: #222; /* unified text color */
-  background-color: #0b3829; /* unified background */
+  color: var(--text);
+  background-color: var(--background);
   overflow-x: hidden;
 }
 
 header {
-  background-color: #005a4c; /* unified primary */
-  color: white;
+  background-color: var(--primary);
+  color: var(--text-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +47,7 @@ header {
 
 .logo img {
   height: 80px;
-  background: #ffffff; /* unified accent */
+  background: var(--card-bg);
   padding: 5px;      /* Add spacing around logo */
   border-radius: 10px; /* Rounded corners for aesthetics */
   box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Subtle shadow for separation */
@@ -42,20 +60,20 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #26bfa6; /* unified accent */
+  color: var(--accent);
 }
 
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0,90,76,0.85), rgba(0,90,76,0.85)), url('images/hero-bg.jpg') center/cover no-repeat;
-  color: white;
+  color: var(--text-light);
   padding: 6rem 2rem;
   text-align: center;
 }
@@ -76,8 +94,8 @@ nav ul li a:hover {
 }
 
 .cta-btn {
-  background-color: #26bfa6; /* unified accent */
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-light);
   padding: 0.75rem 2rem;
   border-radius: 30px;
   font-weight: 600;
@@ -87,22 +105,22 @@ nav ul li a:hover {
 }
 
 .cta-btn:hover {
-  background-color: #00897b; /* unified button hover */
+  background-color: var(--accent-dark);
 }
 
 /* Why Choose Us */
 .why-choose {
+  background-color: var(--card-bg);
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
 }
 
 .why-choose h2 {
+  color: var(--primary);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #005a4c; /* unified primary */
 }
 
 .features {
@@ -113,7 +131,7 @@ nav ul li a:hover {
 }
 
 .feature {
-  background-color: #e6f4f1; /* unified card background */
+  background-color: var(--accent-light);
   padding: 2rem;
   border-radius: 10px;
   width: 280px;
@@ -126,27 +144,27 @@ nav ul li a:hover {
 }
 
 .feature i {
+  color: var(--accent);
   font-size: 3rem;
-  color: #26bfa6; /* unified accent */
   margin-bottom: 1rem;
 }
 
 .feature h3 {
+  color: var(--primary);
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #005a4c; /* unified primary */
 }
 
 .feature p {
+  color: var(--text);
   font-size: 1rem;
-  color: #222; /* unified text */
 }
 
 /* Testimonials */
 .testimonials {
-  background-color: #005a4c; /* unified primary */
-  color: white;
+  background-color: var(--primary);
+  color: var(--text-light);
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -166,7 +184,7 @@ nav ul li a:hover {
 }
 
 .testimonial {
-  background-color: #00897b; /* unified button hover */
+  background-color: var(--accent-dark);
   padding: 2rem;
   border-radius: 10px;
   width: 300px;
@@ -184,8 +202,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #00382c; /* unified footer */
-  color: #26bfa6; /* unified accent */
+  background-color: var(--primary-dark);
+  color: var(--accent);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
@@ -213,14 +231,14 @@ footer {
 
 /* CONTACT SECTION */
 .contact {
+  background-color: var(--accent-light);
   padding: 60px 20px;
-  background-color: #e6f4f1; /* unified card background */
   text-align: center;
 }
 
 .contact h2 {
+  color: var(--primary);
   font-size: 28px;
-  color: #005a4c; /* unified primary */
   margin-bottom: 40px;
 }
 
@@ -239,17 +257,17 @@ footer {
 
 .contact-info p {
   margin: 10px 0;
-  color: #222; /* unified text */
+  color: var(--text);
 }
 
 .contact-info i {
-  color: #26bfa6; /* unified accent */
+  color: var(--accent);
   margin-right: 10px;
 }
 
 .contact-info a {
+  color: var(--accent);
   text-decoration: none;
-  color: #26bfa6; /* unified accent */
 }
 
 .contact-form {
@@ -261,17 +279,17 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
+  border: 1px solid var(--border);
   padding: 12px;
-  border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
 }
 
 .contact-form button {
+  background-color: var(--accent);
+  color: var(--text-light);
   padding: 12px;
-  background-color: #26bfa6; /* unified accent */
-  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -279,18 +297,18 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #00897b; /* unified button hover */
+  background-color: var(--accent-dark);
 }
 
 .contact-options {
+  background-color: var(--background-light);
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f7f6; /* unified background */
 }
 
 .contact-options h2 {
+  color: var(--primary);
   font-size: 28px;
-  color: #005a4c; /* unified primary */
   margin-bottom: 30px;
 }
 
@@ -302,9 +320,9 @@ footer {
 }
 
 .contact-option {
-  background-color: #fff;
-  border: 2px solid #26bfa6; /* unified accent */
-  color: #26bfa6; /* unified accent */
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent);
+  color: var(--accent);
   border-radius: 12px;
   padding: 25px 35px;
   font-size: 18px;
@@ -322,19 +340,19 @@ footer {
 }
 
 .contact-option:hover {
-  background-color: #26bfa6; /* unified accent */
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-light);
 }
 
 .map-section {
+  background-color: var(--accent-light);
   padding: 40px 20px;
-  background-color: #e6f4f1; /* unified card background */
   text-align: center;
 }
 
 .map-address p {
+  color: var(--text);
   font-size: 16px;
-  color: #222; /* unified text */
   margin-top: 15px;
 }
   
@@ -541,37 +559,49 @@ main h1 {
   text-align: center;
   background-color: #0a0606;
 }
-.university-list {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+
+/* University Section */
+
+.university-section {
   text-align: center;
+  padding: 40px 20px;
+}
+.university-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.university-grid {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  max-width: 500px;
-  margin: auto;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
-
-.uni-button {
-  background-color: #009999;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  text-align: center;
+.university-card {
+  background-color: var(--accent-light);
   border-radius: 10px;
-  font-size: 18px;
-  transition: background 0.3s ease;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
 }
-
-.uni-button:hover {
-  background-color: #007777;
+.university-card:hover {
+  transform: translateY(-5px);
 }
-
-.uni-logo {
-  max-width: 200px;
-  margin: 20px auto;
+.university-card img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.university-card p {
+  color: var(--primary);
+  font-weight: bold;
+  margin: 0;
+}
+.university-card a {
+  text-decoration: none;
   display: block;
+  color: inherit;
 }
 
 /* Dropdown base */
@@ -581,9 +611,10 @@ main h1 {
 
 /* First level dropdown */
 .dropdown-menu {
+  background-color: var(--card-bg);
+  color: var(--text-light);
   display: none;
   position: absolute;
-  background-color: #fff;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -595,15 +626,16 @@ main h1 {
 
 /* Sub-dropdown inside */
 .sub-dropdown {
+  background-color: var(--card-bg);
   position: absolute;
 }
 
 .sub-menu {
+  background-color: var(--card-bg);
   display: none;
   position: absolute;
   left: 100%;
   top: 0;
-  background-color: #fff;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -614,32 +646,32 @@ main h1 {
 
 /* Styling links */
 .dropdown-menu a, .sub-menu a {
-  color: #000;
+  color: var(--text);
   padding: 10px 15px;
   display: block;
   text-decoration: none;
 }
 
 .dropdown-menu a:hover, .sub-menu a:hover {
-  background-color: #f0f0f0;
+  background-color: var(--accent-light);
 }
 
 /* === Karabük University Page Styling === */
 
 .university-page {
+  background-color: var(--background-lighter);
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .university-page h1 {
+  color: var(--heading);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #003366;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -658,23 +690,23 @@ main h1 {
 }
 
 .description p {
+  color: var(--text);
   font-size: 1.1rem;
-  color: #333;
   line-height: 1.7;
   text-align: justify;
   margin-bottom: 2rem;
 }
 
 .programs {
-  background-color: #e6f0ff;
+  background-color: #e6f0ff; /* Consider adding to palette if used elsewhere */
+  border-left: 5px solid var(--heading);
   padding: 1.5rem;
-  border-left: 5px solid #003366;
   border-radius: 10px;
 }
 
 .programs h2 {
+  color: var(--heading);
   font-size: 1.8rem;
-  color: #003366;
   margin-bottom: 1rem;
 }
 
@@ -684,7 +716,7 @@ main h1 {
 }
 
 .programs li {
+  color: var(--text);
   font-size: 1.1rem;
-  color: #333;
   margin-bottom: 0.5rem;
 }
