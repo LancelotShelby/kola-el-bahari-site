@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Universities - Kola El Bahari Consulting</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2c8f4a12c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Kola El Bahari Consulting">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Universities</a>
+                    <ul class="dropdown-menu">
+                        <li class="sub-dropdown">
+                            <a href="#">Turkey</a>
+                            <ul class="sub-menu">
+                                <li><a href="unis/Turkey/public-turkey.html">Public Universities</a></li>
+                                <li><a href="unis/Turkey/private-turkey.html">Private Universities</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="main-content-wrapper">
+        <main class="explore-page">
+            <h1>Explore Universities & Programs</h1>
+
+            <div class="filter-controls">
+                <input type="text" id="searchUniversities" placeholder="Search by university or program name...">
+
+                <div class="filter-group">
+                    <label for="countryFilter">Country:</label>
+                    <select id="countryFilter">
+                        <option value="all">All Countries</option>
+                        </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="typeFilter">Type:</label>
+                    <select id="typeFilter">
+                        <option value="all">Public / Private</option>
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="degreeFilter">Degree:</label>
+                    <select id="degreeFilter">
+                        <option value="all">All Degrees</option>
+                        <option value="bachelor">Bachelor's</option>
+                        <option value="master">Master's</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="universityList" class="university-grid-explore">
+                <div class="loading-message">Loading universities...</div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

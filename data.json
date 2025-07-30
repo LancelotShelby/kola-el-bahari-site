@@ -1,0 +1,86 @@
+[
+    {
+        "id": "karabuk_university",
+        "name": "Karabük University",
+        "country": "Turkey",
+        "type": "public",
+        "logo": "images/karabuk_university_logo.png",
+        "url": "unis/Turkey/karabuk_university.html",
+        "description": "A leading public university in Turkey, ranking in the top 1200 universities globally in the Times Higher Education rankings.",
+        "programs": [
+            {
+                "name": "Medicine",
+                "degree": "bachelor",
+                "details": "The Medical program at Karabük University offers comprehensive training...",
+                "duration": "6 Years",
+                "language": "Turkish, English (limited)",
+                "requirements": "High school diploma, YÖS/SAT exam score, high GPA",
+                "tuition": "$3000 - $6000 per year (approx.)"
+            },
+            {
+                "name": "Computer Engineering",
+                "degree": "bachelor",
+                "details": "Focuses on software, hardware, and network systems, with a strong emphasis on practical application and innovation.",
+                "duration": "4 Years",
+                "language": "English, Turkish",
+                "requirements": "High school diploma, YÖS/SAT exam score",
+                "tuition": "$1500 - $3000 per year (approx.)"
+            },
+            {
+                "name": "Civil Engineering",
+                "degree": "bachelor",
+                "details": "Covers the design, construction, and maintenance of the physical and naturally built environment.",
+                "duration": "4 Years",
+                "language": "English, Turkish",
+                "requirements": "High school diploma, YÖS/SAT exam score",
+                "tuition": "$1500 - $3000 per year (approx.)"
+            },
+            {
+                "name": "Business Administration",
+                "degree": "master",
+                "details": "An advanced program designed for professionals seeking to enhance their management and leadership skills.",
+                "duration": "2 Years",
+                "language": "English, Turkish",
+                "requirements": "Bachelor's degree, ALES/GRE/GMAT score, Interview",
+                "tuition": "$2000 - $4000 per year (approx.)"
+            },
+            {
+                "name": "Renewable Energy Systems",
+                "degree": "phd",
+                "details": "A research-intensive doctoral program focusing on advanced topics in sustainable energy technologies.",
+                "duration": "4 Years",
+                "language": "English",
+                "requirements": "Master's degree, ALES/GRE/GMAT score, Research Proposal, Interview",
+                "tuition": "$2500 - $5000 per year (approx.)"
+            },
+            {
+                "name": "Political Science and Public Administration",
+                "degree": "bachelor",
+                "details": "Explores political theories, government structures, public policy, and international relations.",
+                "duration": "4 Years",
+                "language": "Turkish",
+                "requirements": "High school diploma, YÖS exam score",
+                "tuition": "$800 - $1500 per year (approx.)"
+            },
+            {
+                "name": "Turkish Language and Literature",
+                "degree": "bachelor",
+                "details": "A deep dive into Turkish language, literary history, and critical analysis.",
+                "duration": "4 Years",
+                "language": "Turkish",
+                "requirements": "High school diploma, YÖS exam score",
+                "tuition": "$700 - $1200 per year (approx.)"
+            },
+            {
+                "name": "Law",
+                "degree": "bachelor",
+                "details": "Comprehensive study of legal principles, judicial processes, and various branches of law.",
+                "duration": "4 Years",
+                "language": "Turkish",
+                "requirements": "High school diploma, YÖS/SAT exam score, high GPA",
+                "tuition": "$1500 - $2500 per year (approx.)"
+            }
+        ]
+    }
+
+]
