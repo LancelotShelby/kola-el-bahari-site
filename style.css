@@ -669,8 +669,7 @@ main h1 {
 
 .explore-page {
     background-color: var(--background-lighter);
-    padding: 3rem 2rem;
-    max-width: 1200px; /* Max width for content */
+    max-width: 100%; /* Max width for content */
     margin: 0 auto; /* Center content */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -860,4 +859,110 @@ main h1 {
     .university-grid-explore {
         grid-template-columns: 1fr; /* Single column layout on small screens */
     }
+}
+/* --- Explore Page University Card Program List Styling --- */
+
+.uni-programs-list {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.uni-programs-list h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.program-item-explore {
+    background-color: var(--background-lighter); /* Lighter background for program details */
+    border: 1px solid var(--accent-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.program-title-explore {
+    padding: 12px 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem; /* Smaller font for program titles */
+    font-weight: 600;
+    color: var(--text);
+    background-color: var(--accent-light);
+    transition: background-color 0.2s ease;
+}
+
+.program-title-explore:hover {
+    background-color: var(--accent);
+    color: var(--text-light);
+}
+
+.program-title-explore .toggle-icon-explore {
+    font-size: 0.8rem; /* Smaller icon */
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.program-details-explore {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 18px; /* Initial padding */
+}
+
+.program-details-explore.active {
+    max-height: 300px; /* Adjust as needed */
+    padding: 15px 18px;
+}
+
+.program-details-explore p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+}
+
+.program-details-explore ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.program-details-explore li {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.program-details-explore li strong {
+    color: var(--primary-dark);
+}
+
+/* Ensure the main link doesn't cover the program items */
+.university-card-link-main {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Important: Make it a block to not stretch over programs */
+    padding-bottom: 15px; /* Add some space below the description before programs list */
+}
+
+/* Remove 'View Details' button, as clicking the card's main area or programs provides details */
+.university-card-explore .read-more-btn {
+    display: none; /* Hide the old "View Details" button */
+}
+
+/* Specific styling for university card elements not within the main link */
+.university-card-explore h3,
+.university-card-explore .uni-info,
+.university-card-explore .uni-description {
+    text-align: left; /* Adjust alignment if desired */
+    margin-left: 0;
+    margin-right: 0;
 }
