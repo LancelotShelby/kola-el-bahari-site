@@ -127,15 +127,15 @@
  <section class="contact" id="contact">
   <h2>Contact Us</h2>
   <div class="contact-container">
-    <div class="contact-info" onsubmit="mailTo('kolaelbahariconsulting@gmail.com')">
+    <div class="contact-info">
       <p><i class="fas fa-map-marker-alt"></i> Istanbul, Türkiye</p>
       <p><i class="fas fa-phone"></i> <a href="tel:+905388272030">+90 538 827 20 30</a></p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:kolaelbahariconsulting@gmail.com">kolaelbahariconsulting@gmail.com</a></p>
     </div>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
+    <form class="contact-form" action="mailto:kolaelbahariconsulting@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Email</button>
     </form>
   </div>

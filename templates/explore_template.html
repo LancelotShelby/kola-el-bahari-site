@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Universities & Programs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    {% include 'header_template.html' with context %}
+
+    <main>
+        <div class="container">
+            <section class="filters-search">
+                <h2>Find Your Dream University</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by university name, country, or program...">
+                    <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="filters">
+                    <select id="countryFilter">
+                        <option value="">All Countries</option>
+                        {% for country in all_countries %}
+                            <option value="{{ country }}">{{ country }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="university-listings">
+                <div id="universityCards" class="grid-container">
+                    {% for university in universities %}
+                        <div class="university-card" data-country="{{ university.country | lower }}" data-type="{{ university.type | lower }}" data-name="{{ university.name | lower }}">
+                            <img src="{{ university.logo }}" alt="{{ university.name }} Logo" class="university-logo">
+                            <h3>{{ university.name }}</h3>
+                            <p class="country-name"><i class="fas fa-globe-americas"></i> {{ university.country }}</p>
+                            <p class="university-type"><i class="fas fa-school"></i> {{ university.type | capitalize }}</p>
+                            <div class="card-programs-preview">
+                                <h4>Popular Programs:</h4>
+                                {% if university.priority_programs %}
+                                    <ul>
+                                        {% for program in university.priority_programs %}
+                                            <li><a href="{{ program.internal_url }}">{{ program.name }} ({{ program.degree | capitalize }})</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    <p>No priority programs listed yet.</p>
+                                {% endif %}
+                            </div>
+                            <div class="card-actions">
+                                <a href="{{ university.internal_url }}" class="button view-all-programs-btn">View All Programs <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const countryFilter = document.getElementById('countryFilter');
+            const typeFilter = document.getElementById('typeFilter');
+            const universityCardsContainer = document.getElementById('universityCards');
+            const allUniversityCards = Array.from(document.querySelectorAll('.university-card'));
+
+            function filterUniversities() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCountry = countryFilter.value.toLowerCase();
+                const selectedType = typeFilter.value.toLowerCase();
+
+                allUniversityCards.forEach(card => {
+                    const universityName = card.dataset.name;
+                    const universityCountry = card.dataset.country;
+                    const universityType = card.dataset.type;
+
+                    const matchesSearch = universityName.includes(searchTerm) ||
+                                          universityCountry.includes(searchTerm) ||
+                                          // Check for program names within the card if needed, though simpler for now
+                                          card.textContent.toLowerCase().includes(searchTerm); // Broad text search
+
+                    const matchesCountry = selectedCountry === '' || universityCountry === selectedCountry;
+                    const matchesType = selectedType === '' || universityType === selectedType;
+
+                    if (matchesSearch && matchesCountry && matchesType) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            searchInput.addEventListener('keyup', filterUniversities);
+            countryFilter.addEventListener('change', filterUniversities);
+            typeFilter.addEventListener('change', filterUniversities);
+        });
+    </script>
+</body>
+</html>

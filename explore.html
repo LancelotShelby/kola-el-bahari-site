@@ -2,80 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Explore Universities - Kola El Bahari Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Universities & Programs</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2c8f4a12c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Kola El Bahari Consulting">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Universities</a>
-                    <ul class="dropdown-menu">
-                        <li class="sub-dropdown">
-                            <a href="#">Turkey</a>
-                            <ul class="sub-menu">
-                                <li><a href="unis/Turkey/public-turkey.html">Public Universities</a></li>
-                                <li><a href="unis/Turkey/private-turkey.html">Private Universities</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-     <div class="main-content-wrapper">
-        <main class="explore-page">
-            <h1>Explore Universities & Programs</h1>
+    <div class="logo">
+        <img src="images/logo.png" alt="Kola El Bahari Consulting">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Universities</a>
+                <ul class="dropdown-menu">
+                    
+                    <li class="sub-dropdown">
+                        <a href="#">Turkey</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="unis/turkey/public-turkey.html">Public Universities</a></li>
+                            
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <div class="filter-controls">
-                <input type="text" id="searchUniversities" placeholder="Search by university or program name...">
-
-                <div class="filter-group">
-                    <label for="countryFilter">Country:</label>
-                    <select id="countryFilter">
-                        <option value="all">All Countries</option>
-                        </select>
+    <main>
+        <div class="container">
+            <section class="filters-search">
+                <h2>Find Your Dream University</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by university name, country, or program...">
+                    <button id="searchButton"><i class="fas fa-search"></i> Search</button>
                 </div>
-
-                <div class="filter-group">
-                    <label for="typeFilter">Type:</label>
+                <div class="filters">
+                    <select id="countryFilter">
+                        <option value="">All Countries</option>
+                        
+                            <option value="Turkey">Turkey</option>
+                        
+                    </select>
                     <select id="typeFilter">
-                        <option value="all">Public / Private</option>
+                        <option value="">All Types</option>
                         <option value="public">Public</option>
                         <option value="private">Private</option>
                     </select>
                 </div>
+            </section>
 
-                <div class="filter-group">
-                    <label for="degreeFilter">Degree:</label>
-                    <select id="degreeFilter">
-                        <option value="all">All Degrees</option>
-                        <option value="bachelor">Bachelor's</option>
-                        <option value="master">Master's</option>
-                        <option value="phd">PhD</option>
-                    </select>
+            <section class="university-listings">
+                <div id="universityCards" class="grid-container">
+                    
+                        <div class="university-card" data-country="turkey" data-type="public" data-name="karabük university">
+                            <img src="images/karabuk-university_logo.png" alt="Karabük University Logo" class="university-logo">
+                            <h3>Karabük University</h3>
+                            <p class="country-name"><i class="fas fa-globe-americas"></i> Turkey</p>
+                            <p class="university-type"><i class="fas fa-school"></i> Public</p>
+                            <div class="card-programs-preview">
+                                <h4>Popular Programs:</h4>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="architecture.html">Architecture (Bachelor)</a></li>
+                                        
+                                            <li><a href="computer-engineering.html">Computer Engineering (Bachelor)</a></li>
+                                        
+                                            <li><a href="computer-engineering.html">Computer Engineering (Bachelor)</a></li>
+                                        
+                                            <li><a href="software-engineering.html">Software Engineering (Bachelor)</a></li>
+                                        
+                                    </ul>
+                                
+                            </div>
+                            <div class="card-actions">
+                                <a href="unis/turkey/karabuk-university/karabuk-university_university.html" class="button view-all-programs-btn">View All Programs <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    
+                        <div class="university-card" data-country="turkey" data-type="public" data-name="bolu abant i̇zzet baysal university">
+                            <img src="images/bolu-abant-izzet-baysal-university_logo.png" alt="Bolu Abant İzzet Baysal University Logo" class="university-logo">
+                            <h3>Bolu Abant İzzet Baysal University</h3>
+                            <p class="country-name"><i class="fas fa-globe-americas"></i> Turkey</p>
+                            <p class="university-type"><i class="fas fa-school"></i> Public</p>
+                            <div class="card-programs-preview">
+                                <h4>Popular Programs:</h4>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="architecture.html">Architecture (Bachelor)</a></li>
+                                        
+                                            <li><a href="computer-engineering.html">Computer Engineering (Bachelor)</a></li>
+                                        
+                                            <li><a href="computer-engineering.html">Computer Engineering (Bachelor)</a></li>
+                                        
+                                            <li><a href="software-engineering.html">Software Engineering (Bachelor)</a></li>
+                                        
+                                    </ul>
+                                
+                            </div>
+                            <div class="card-actions">
+                                <a href="unis/turkey/bolu-abant-izzet-baysal-university/bolu-abant-izzet-baysal-university_university.html" class="button view-all-programs-btn">View All Programs <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    
                 </div>
-            </div>
-
-            <div id="universityList" class="university-grid-explore">
-                <div class="loading-message">Loading universities...</div>
-            </div>
-        </main>
-    </div>
+            </section>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const countryFilter = document.getElementById('countryFilter');
+            const typeFilter = document.getElementById('typeFilter');
+            const universityCardsContainer = document.getElementById('universityCards');
+            const allUniversityCards = Array.from(document.querySelectorAll('.university-card'));
+
+            function filterUniversities() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCountry = countryFilter.value.toLowerCase();
+                const selectedType = typeFilter.value.toLowerCase();
+
+                allUniversityCards.forEach(card => {
+                    const universityName = card.dataset.name;
+                    const universityCountry = card.dataset.country;
+                    const universityType = card.dataset.type;
+
+                    const matchesSearch = universityName.includes(searchTerm) ||
+                                          universityCountry.includes(searchTerm) ||
+                                          // Check for program names within the card if needed, though simpler for now
+                                          card.textContent.toLowerCase().includes(searchTerm); // Broad text search
+
+                    const matchesCountry = selectedCountry === '' || universityCountry === selectedCountry;
+                    const matchesType = selectedType === '' || universityType === selectedType;
+
+                    if (matchesSearch && matchesCountry && matchesType) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            searchInput.addEventListener('keyup', filterUniversities);
+            countryFilter.addEventListener('change', filterUniversities);
+            typeFilter.addEventListener('change', filterUniversities);
+        });
+    </script>
 </body>
 </html>
