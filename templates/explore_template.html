@@ -22,7 +22,7 @@
                     <select id="countryFilter">
                         <option value="">All Countries</option>
                         {% for country in all_countries %}
-                            <option value="{{ country }}">{{ country }}</option>
+                            <option value="{{ country | lower }}">{{ country }}</option>
                         {% endfor %}
                     </select>
                     <select id="typeFilter">
@@ -30,11 +30,17 @@
                         <option value="public">Public</option>
                         <option value="private">Private</option>
                     </select>
+                    <select id="degreeFilter">
+                        <option value="">All Degrees</option>
+                        <option value="bachelor">Bachelor</option>
+                        <option value="master">Master</option>
+                        <option value="phd">PhD</option>
+                    </select>
                 </div>
             </section>
 
             <section class="university-listings">
-                <div id="universityCards" class="grid-container">
+                <div id="universityList" class="grid-container">
                     {% for university in universities %}
                         <div class="university-card" data-country="{{ university.country | lower }}" data-type="{{ university.type | lower }}" data-name="{{ university.name | lower }}">
                             <img src="{{ university.logo }}" alt="{{ university.name }} Logo" class="university-logo">
@@ -67,44 +73,6 @@
         <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('searchInput');
-            const countryFilter = document.getElementById('countryFilter');
-            const typeFilter = document.getElementById('typeFilter');
-            const universityCardsContainer = document.getElementById('universityCards');
-            const allUniversityCards = Array.from(document.querySelectorAll('.university-card'));
-
-            function filterUniversities() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const selectedCountry = countryFilter.value.toLowerCase();
-                const selectedType = typeFilter.value.toLowerCase();
-
-                allUniversityCards.forEach(card => {
-                    const universityName = card.dataset.name;
-                    const universityCountry = card.dataset.country;
-                    const universityType = card.dataset.type;
-
-                    const matchesSearch = universityName.includes(searchTerm) ||
-                                          universityCountry.includes(searchTerm) ||
-                                          // Check for program names within the card if needed, though simpler for now
-                                          card.textContent.toLowerCase().includes(searchTerm); // Broad text search
-
-                    const matchesCountry = selectedCountry === '' || universityCountry === selectedCountry;
-                    const matchesType = selectedType === '' || universityType === selectedType;
-
-                    if (matchesSearch && matchesCountry && matchesType) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            searchInput.addEventListener('keyup', filterUniversities);
-            countryFilter.addEventListener('change', filterUniversities);
-            typeFilter.addEventListener('change', filterUniversities);
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

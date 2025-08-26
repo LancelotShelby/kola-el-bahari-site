@@ -13,10 +13,10 @@
                         <a href="#">{{ country | title }}</a>
                         <ul class="sub-menu">
                             {% if 'public' in types %}
-                            <li><a href="{{ relative_path_prefix }}unis/{{ country }}/public-{{ country }}.html">Public Universities</a></li>
+                            <li><a href="{{ relative_path_prefix }}unis/{{ country|slugify }}/public-{{ country|slugify }}.html">Public Universities</a></li>
                             {% endif %}
                             {% if 'private' in types %}
-                            <li><a href="{{ relative_path_prefix }}unis/{{ country }}/private-{{ country }}.html">Private Universities</a></li>
+                            <li><a href="{{ relative_path_prefix }}unis/{{ country|slugify }}/private-{{ country|slugify }}.html">Private Universities</a></li>
                             {% endif %}
                         </ul>
                     </li>
