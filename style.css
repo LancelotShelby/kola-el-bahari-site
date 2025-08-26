@@ -1,12 +1,7 @@
-/* FIXES APPLIED:
-   - Removed stray/duplicate rules.
-   - Fixed missing/extra curly braces.
-   - Removed duplicate .contact, .contact-options, .map-section, etc.
-   - Fixed main h1 margin-bottom property.
-   - Removed stray non-CSS characters.
-   - Ensured all properties end with semicolons.
-   - Removed duplicate selectors and merged rules.
-   - Fixed indentation and formatting.
+/*
+ * Entire style.css file made phone-friendly
+ * All previous styles are retained and adjusted where necessary.
+ * New media queries added for responsiveness.
 */
 
 /* Unified Color Palette */
@@ -65,7 +60,7 @@ header {
   background: var(--card-bg);
   padding: 5px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
 
 /* Navigation */
@@ -97,7 +92,7 @@ nav ul li a:hover {
   position: absolute;
   background-color: var(--card-bg);
   min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   list-style: none;
 }
@@ -107,14 +102,15 @@ nav ul li a:hover {
 }
 
 .sub-dropdown {
-  position: absolute;
+  position: relative; /* Changed for mobile-friendly layout */
   background-color: var(--card-bg);
 }
+
 .sub-dropdown:hover .sub-menu {
   display: block;
   left: 100%;
   top: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu a, .sub-menu a {
@@ -198,7 +194,7 @@ nav ul li a:hover {
   padding: 2rem;
   border-radius: 10px;
   width: 280px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -251,7 +247,7 @@ nav ul li a:hover {
   padding: 2rem;
   border-radius: 10px;
   width: 300px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   font-style: italic;
   position: relative;
 }
@@ -270,23 +266,6 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .features, .testimonial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul {
-    gap: 1rem;
-  }
-  .hero-text h1 {
-    font-size: 2.25rem;
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
 }
 
 /* CONTACT SECTION */
@@ -550,7 +529,7 @@ footer {
   padding: 20px;
   background-color: var(--accent-light);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   align-items: flex-end;
 }
 
@@ -576,7 +555,7 @@ footer {
   color: var(--text);
   background-color: var(--card-bg);
   width: 100%;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -692,29 +671,7 @@ footer {
   font-weight: bold;
 }
 
-/* Responsive adjustments for Explore Page */
-@media (max-width: 768px) {
-  .filter-controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .filter-group {
-    min-width: unset;
-    width: 100%;
-  }
-  #searchUniversities {
-    min-width: unset;
-    width: 100%;
-  }
-  .explore-page h1 {
-    font-size: 2rem;
-  }
-  .university-grid-explore {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- Explore Page University Card Program List Styling --- */
+/* Explore Page University Card Program List Styling */
 .uni-programs-list {
   margin-top: 15px;
   padding-top: 15px;
@@ -736,7 +693,7 @@ footer {
   border-radius: 8px;
   margin-bottom: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .program-title-explore {
@@ -830,7 +787,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -840,7 +797,7 @@ footer {
   margin: 10% auto;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 700px;
   position: relative;
@@ -849,8 +806,8 @@ footer {
 }
 
 @keyframes animatetop {
-  from {top: -300px; opacity: 0;}
-  to {top: 0; opacity: 1;}
+  from { top: -300px; opacity: 0; }
+  to { top: 0; opacity: 1; }
 }
 
 .close-button {
@@ -955,7 +912,7 @@ footer {
     font-size: 0.9rem;
   }
 }
-/* --- Explore Page Specific Styles --- */
+/* Explore Page Specific Styles */
 .filters-search {
   background-color: var(--background-light);
   border-radius: 10px;
@@ -1057,7 +1014,7 @@ footer {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .university-card:hover {
@@ -1132,386 +1089,539 @@ footer {
 
 /* --- University Full Detail Page Styles --- */
 .university-full-detail-page-main {
-    padding: 2rem 2rem 4rem;
-    background-color: var(--background);
+  padding: 2rem 2rem 4rem;
+  background-color: var(--background);
 }
 
 .uni-header {
-    text-align: center;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2.5rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
 }
 
 .uni-detail-logo {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 1.5rem;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1.5rem;
 }
 
 .uni-header h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--heading);
-    margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
 }
 
 .uni-country,
 .uni-type {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    text-transform: capitalize;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .uni-description-full {
-    font-size: 1rem;
-    color: var(--text-color);
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 1.5rem auto 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 1.5rem auto 0;
 }
 
-/* --- Programs Section --- */
+/* Programs Section */
 .programs-section h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--heading);
-    margin-bottom: 2rem;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Collapsible Program List */
 .programs-list-collapsible {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .program-item-full-page {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .program-item-full-page:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .program-title-full-page {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary);
-    padding: 1.5rem 2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease;
 }
 
 .program-title-full-page:hover {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 .program-details-full-page {
-    display: none;
-    padding: 1rem 2rem 2rem;
-    border-top: none;
-    line-height: 1.6;
-    transition: all 0.4s ease-in-out;
+  display: none;
+  padding: 1rem 2rem 2rem;
+  border-top: none;
+  line-height: 1.6;
+  transition: all 0.4s ease-in-out;
 }
 
 .program-details-full-page.active {
-    display: block;
+  display: block;
 }
 
 .program-details-full-page p {
-    margin-bottom: 0.8rem;
-    color: var(--text-color);
+  margin-bottom: 0.8rem;
+  color: var(--text);
 }
 
 .program-details-full-page p strong {
-    color: var(--heading);
+  color: var(--heading);
 }
 
 .program-details-full-page ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
 }
 
 .program-details-full-page li {
-    background-color: var(--background);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 /* View Details Button */
 .view-program-details-btn {
-    display: inline-block;
-    background-color: var(--accent);
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .view-program-details-btn:hover {
-    background-color: var(--accent-dark);
+  background-color: var(--accent-dark);
 }
 
 /* Chevron Icon */
 .toggle-icon-full-page {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
 }
 
-/* --- Program Detail Page Main Section --- */
+/* Program Detail Page Main Section */
 .program-detail-page-main {
-    padding: 2rem 2rem 4rem;
-    background-color: var(--background);
+  padding: 2rem 2rem 4rem;
+  background-color: var(--background);
 }
 
-/* --- Program Header Section --- */
+/* Program Header Section */
 .program-detail-header {
-    text-align: center;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2.5rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
 }
 
 .back-to-uni-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-muted);
-    font-size: 1rem;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .back-to-uni-link:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .program-detail-header h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--heading);
-    margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
 }
 
 .program-sub-title {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
 }
 
 .program-sub-title a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .program-degree-type {
-    font-size: 1rem;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-top: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0;
 }
 
-/* --- Program Details Section --- */
+/* Program Details Section */
 .program-full-details {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .detail-item {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .detail-item h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--primary);
-    border-left: 4px solid var(--primary);
-    padding-left: 1rem;
-    margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .detail-item p {
-    font-size: 1rem;
-    color: var(--text-color);
-    line-height: 1.6;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.6;
 }
 
 .detail-item p strong {
-    color: var(--heading);
+  color: var(--heading);
 }
 
 .detail-item ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
 }
 
 .detail-item li {
-    background-color: var(--background);
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: var(--heading);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: var(--background);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--heading);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .detail-item li strong {
-    color: var(--text-muted);
-    font-weight: 500;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-/* --- Responsive adjustments --- */
-@media (max-width: 768px) {
-    .program-detail-page-main {
-        padding: 1.5rem;
-    }
-
-    .program-detail-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .program-full-details {
-        padding: 1.5rem;
-    }
-}
-
-/* --- Country List Page Main Section --- */
+/* Country List Page Main Section */
 .country-list-page-main {
-    padding: 2rem 2rem 4rem;
-    background-color: var(--background);
+  padding: 2rem 2rem 4rem;
+  background-color: var(--background);
 }
 
 .country-list-page-main h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--heading);
-    text-align: center;
-    margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .country-list-page-main p {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
-/* --- List of Universities --- */
+/* List of Universities */
 .university-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
 }
 
 .university-card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .university-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .university-logo-container {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
-    padding: 1rem;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem;
 }
 
 .university-logo-container img {
-    max-width: 80%;
-    max-height: 100%;
-    object-fit: contain;
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .university-info {
-    padding: 1.5rem;
-    text-align: center;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .university-info h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 .university-info p {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: center;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .university-info .view-details-btn {
-    display: inline-block;
-    background-color: var(--accent);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .university-info .view-details-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-/* --- Back Link --- */
+/* Back Link */
 .back-link {
-    display: block;
-    width: fit-content;
-    margin: 2rem auto 0;
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .back-link:hover {
-    color: var(--accent);
+  color: var(--accent);
+}
+
+/* === Responsive Media Queries === */
+@media (max-width: 900px) {
+  /* General Layout Adjustments */
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  /* Dropdown Fixes */
+  .dropdown-menu, .sub-menu {
+    position: static;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .dropdown-menu a, .sub-menu a {
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .sub-dropdown:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Main Sections */
+  .why-choose, .testimonials, .contact {
+    padding: 2rem 1rem;
+  }
+
+  .why-choose h2, .testimonials h2, .contact h2, .contact-options h2 {
+    font-size: 2rem;
+  }
+
+  .features, .testimonial-cards, .options-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .feature, .testimonial, .contact-info, .contact-form, .contact-option {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Explore Page */
+  .explore-page h1 {
+    font-size: 2rem;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .filter-group {
+    min-width: unset;
+  }
+
+  #searchUniversities {
+    min-width: unset;
+  }
+
+  .university-grid-explore {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* University Detail Page */
+  .university-full-detail-page-main {
+    padding: 1.5rem;
+  }
+  
+  .uni-header h1 {
+    font-size: 2rem;
+  }
+
+  .uni-description-full {
+    font-size: 0.95rem;
+  }
+
+  .programs-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .program-title-full-page {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Program Detail Page */
+  .program-detail-page-main {
+    padding: 1.5rem;
+  }
+
+  .program-detail-header h1 {
+    font-size: 2rem;
+  }
+
+  .program-full-details {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very small screens */
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .contact-option {
+    padding: 20px;
+  }
 }
