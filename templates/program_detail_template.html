@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ university.name }} - {{ program.name }} Details</title>
+    <link rel="stylesheet" href="{{ relative_path_prefix }}style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    {% include 'header_template.html' with context %}
+
+    <main class="program-detail-page-main">
+        <div class="container">
+            <div class="program-detail-header">
+                <a href="{{ university_page_url }}" class="back-to-uni-link"><i class="fas fa-arrow-left"></i> Back to {{ university.name }}</a>
+                <h1>{{ program.name }}</h1>
+                <p class="program-sub-title">at <a href="{{ university_page_url }}">{{ university.name }}</a></p>
+                <p class="program-degree-type"><strong>Degree:</strong> {{ program.degree | capitalize }}</p>
+            </div>
+
+            <section class="program-full-details">
+                <div class="detail-item">
+                    <h3>Overview</h3>
+                    <p>{{ program.details | default('No detailed overview available.') }}</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Key Information</h3>
+                    <ul>
+                        {% if program.duration %}<li><strong>Duration:</strong> {{ program.duration }}</li>{% endif %}
+                        {% if program.language %}<li><strong>Language:</strong> {{ program.language }}</li>{% endif %}
+                        {% if program.requirements %}<li><strong>Requirements:</strong> {{ program.requirements }}</li>{% endif %}
+                        {% if program.tuition %}<li><strong>Tuition Fee:</strong> {{ program.tuition }}</li>{% endif %}
+                    </ul>
+                </div>
+                {% if university.url %}
+                <div class="detail-item">
+                    <h3>Official University Links</h3>
+                    <p><a href="{{ university.url }}" target="_blank" class="uni-website-btn"><i class="fas fa-external-link-alt"></i> Visit Official University Website</a></p>
+                </div>
+                {% endif %}
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>
