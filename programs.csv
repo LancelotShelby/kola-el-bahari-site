@@ -1,18 +1,57 @@
 ﻿university_id,name,degree,language,duration,tuition,requirements,details,priority
 karabuk-university,Architecture,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Business Administration,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Business Administration,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Entrepreneurship,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Finance and Banking,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,International Business,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Public Relations and Advertising,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Dentistry,Bachelor,Turkish,5 Years,null,null,null,null
+karabuk-university,Economics,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,International Relations,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,International Relations,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Political Science and Public Administration,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Automotive Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Biomedical Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Civil Engineering,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,Computer Engineering,Bachelor,English,4 Years,null,null,null,null
 karabuk-university,Computer Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Electrical and Electronics Engineering,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Electrical and Electronics Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Environmental Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Industrial Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Mechanical Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Mechanical Engineering,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Mechatronics Engineering ,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Medical Engineering,Bachelor,30% English,4 Years,null,null,null,null
+karabuk-university,Medical Engineering,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Metallurgical and Materials Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Metallurgical and Materials Engineering,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Railway Systems Engineering,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Railway Systems Engineering,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,Software Engineering,Bachelor,Turkish,4 Years,null,null,null,null
-karabuk-university,Dentistry,Bachelor,Turkish,5 Years,null,null,null,null
+karabuk-university,Transportation Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Chemistry,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Mathematics,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Forest Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Child Development,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Midwifery,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Nursing,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Physiotherapy and Rehabilitation,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,Archeology,Bachelor,Turkish,4 Years,null,null,null,null
-karabuk-university,Geography,Bachelor,Turkish,4 Years,null,null,null,null
-karabuk-university,Philosophy,Bachelor,Turkish,4 Years,null,null,null,null
-karabuk-university,English Language and Literature,Bachelor,English,4 Years,null,null,null,null
-karabuk-university,Psychology,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,Art History,Bachelor,Turkish,4 Years,null,null,null,null
-karabuk-university,Sociology,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,English Language and Literature,Bachelor,English,4 Years,null,null,null,null
+karabuk-university,Geography,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,History,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Philosophy,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Psychology,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Sociology,Bachelor,Turkish,4 Years,null,null,null,null
 karabuk-university,Turkish Language and Literature,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Islamic Scienes,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Energy Systems Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Manufacturing Engineering,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Graphics Design,Bachelor,Turkish,4 Years,null,null,null,null
+karabuk-university,Industrial Design Engineering,Bachelor,Turkish,4 Years,null,null,null,null
 bolu-abant-izzet-baysal-university,Architecture,Bachelor,Turkish,4 Years,null,null,null,null
 bolu-abant-izzet-baysal-university,Computer Engineering,Bachelor,English,4 Years,null,null,null,null
 bolu-abant-izzet-baysal-university,Computer Engineering,Bachelor,30% English,4 Years,null,null,null,null
@@ -42,3 +81,123 @@ bolu-abant-izzet-baysal-university,Medicine,Bachelor,30% English,6 Years,null,nu
 bolu-abant-izzet-baysal-university,Pharmacy,Bachelor,Turkish,5 Years,null,null,null,null
 bolu-abant-izzet-baysal-university,Pharmacy,Bachelor,English,5 Years,null,null,null,null
 bolu-abant-izzet-baysal-university,Pharmacy,Bachelor,30% English,5 Years,null,null,null,null
+nisantasi-university,Anesthesia,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Audiometry,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Child Development,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Dental Prosthetics Technology,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Dialysis,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Electroneurophysiology,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,First And Emergency Aid,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Medical Documentation And Secreteriat,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Medical Imaging Techniques,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Medical Laboratory Techniques,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Occupational Health And Safety,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Operating Room Services,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Opticianry,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Oral And Dental Health,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Orthopedic Prosthetics And Orthotics,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Pathology Laboratory Techniques,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Pharmacy Services,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Physiothreapy,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Radiotherapy,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Social Services,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Biomedical Device Technology,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Digital Health Services Technician,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Medical Data Processing Technician,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Accounting And Tax Applications,Associate ,Turkish,2 Years,"1,400 USD per year",null,null,null
+nisantasi-university,Aircraft Technology,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Architectural Restoration,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Automotive Technology,Associate ,Turkish,2 Years,"1,400 USD per year",null,null,null
+nisantasi-university,Banking And Insurance,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Business Administration,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Civil Aviation And Cabin Services,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Civil Aviation Management,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Computer Programming,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Construction Technology,Associate ,Turkish,2 Years,"1,400 USD per year",null,null,null
+nisantasi-university,Cullinary,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Electricity,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Fashion Design,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Graphic Design,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Interior Design,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Foreign Trade,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Court And Office Services,Associate ,Turkish,2 Years,"1,400 USD per year",null,null,null
+nisantasi-university,Logistics,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Machinery,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Maritime Transport And Business,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Public Relations And Promotion,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Tour Guide Training,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Tourism And Hotel Management,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Photography And Camera Operation,Associate ,Turkish,2 Years,"1,300 USD per year",null,null,null
+nisantasi-university,Internet And Web Technologies,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Mechatronics,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Mobile Technologies,Associate ,Turkish,2 Years,1950 USD per year,null,null,null
+nisantasi-university,Green And Ecological Building Technician,Associate ,Turkish,2 Years,"1,300 USD per year",null,null,null
+nisantasi-university,Electronics Technology,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Marina And Yacht Management,Associate ,Turkish,2 Years,"1,600 USD per year",null,null,null
+nisantasi-university,Software Development,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Unmanned Vehicle Technician,Associate ,Turkish,2 Years,"1,950 USD per year",null,null,null
+nisantasi-university,Music,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Performing Arts (theatre),Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Communication And Design,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Digital Game Design,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Fashion And Textile Design,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Gastronomy And Culinary Arts,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Graphic Design,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Industrial Design,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Interior Architecture,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Interior Architecture,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,"Radio, Television And Cinema",Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Dentistry,Bachelor,Turkish,5 Years,"13,500 USD per year",null,null,null
+nisantasi-university,Dentistry,Bachelor,English,5 Years,"17,500 USD per year",null,null,null
+nisantasi-university,Aviation Management,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Aviation Management,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Business Administration,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Business Administration,Bachelor,English,4 Years,"4,400 USD per year",null,null,null
+nisantasi-university,English Language And Literature,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,English Translation And Interpretation,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Finance And Banking,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,International Relations,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,International Trade And Logistics,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Management Information Systems,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Management Information Systems,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,New Media And Communication,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,New Media And Communication,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Political Science And Public Administration,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Psychology,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Psychology,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Public Relations And Advertising,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Social Services,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Sociology,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Accounting And Finance Management,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Economics,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Economics And Finance,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Tourism Administration,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Architecture,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Architecture,Bachelor,English,4 Years,"4,400 USD per year",null,null,null
+nisantasi-university,Civil Engineering,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Civil Engineering,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Computer Engineering,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Electrical And Electronics Engineering,Bachelor,English,4 Years,"3,800 USD per year",null,null,null
+nisantasi-university,Industrial Engineering,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Mechatronics Engineering,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Software Engineering,Bachelor,English,4 Years,"4,400 USD per year",null,null,null
+nisantasi-university,Mechanical Engineering,Bachelor,English,4 Years,"4,400 USD per year",null,null,null
+nisantasi-university,Nursing,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Nutrition And Dietetics,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Physiotherapy And Rehabilitation,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Speech And Language Therapy,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Midwifery,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Medicine,Bachelor,Turkish,6 Years,"14,500 USD per year",null,null,null
+nisantasi-university,International Trade And Business Administration,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Tour Guide Training,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Information Systems And Technologies,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Software Development,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Data Science And Analytics,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Air Traffic Control,Bachelor,Turkish,4 Years,"8,000 USD per year",null,null,null
+nisantasi-university,Aircraft Maintenance And Repair,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Avionics,Bachelor,Turkish,4 Years,"3,250 USD per year",null,null,null
+nisantasi-university,Flight Training,Bachelor,English,4 Years,"10,000 USD per year",null,null,null
+nisantasi-university,Coach Training,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Exercise And Sports Sciences,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Recreation,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null
+nisantasi-university,Sports Management,Bachelor,Turkish,4 Years,"2,950 USD per year",null,null,null

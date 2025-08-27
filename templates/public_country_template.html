@@ -13,8 +13,23 @@
     <main class="country-list-page-main">
         <div class="container">
             <h1>Public Universities in {{ country_name | title }}</h1>
-            <p>This page will list details about public universities in {{ country_name | title }}.</p>
-            <p>You can add specific content or loop through universities here if you enhance the Python script to pass more data.</p>
+            <p>Explore the list of Public universities in {{ country_name | title }}.</p>
+            
+            <div class="university-grid">
+                {% for uni in unis %}
+                <a href="{{ relative_path_prefix }}{{ uni.internal_url }}" class="university-card">
+                    <div class="university-logo-container">
+                        <img src="{{ relative_path_prefix }}/{{ uni.logo }}" alt="{{ uni.name }} logo">
+                    </div>
+                    <div class="university-info">
+                        <h3>{{ uni.name }}</h3>
+                        <p><strong>Country:</strong> {{ uni.country }}</p>
+                        <p><strong>Type:</strong> {{ uni.type }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            
             <a href="{{ relative_path_prefix }}explore.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Explore</a>
         </div>
     </main>

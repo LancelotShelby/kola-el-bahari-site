@@ -2,7 +2,7 @@
  * Entire style.css file made phone-friendly
  * All previous styles are retained and adjusted where necessary.
  * New media queries added for responsiveness.
-*/
+ */
 
 /* Unified Color Palette */
 :root {
@@ -102,7 +102,7 @@ nav ul li a:hover {
 }
 
 .sub-dropdown {
-  position: relative; /* Changed for mobile-friendly layout */
+  position: fixed; /* Changed for mobile-friendly layout */
   background-color: var(--card-bg);
 }
 
@@ -122,6 +122,11 @@ nav ul li a:hover {
 
 .dropdown-menu a:hover, .sub-menu a:hover {
   background-color: var(--accent-light);
+}
+
+.sub-menu.off-screen-left {
+  left: auto;
+  right: 100%; /* Reposition to the left of the parent item */
 }
 
 /* Main content wrapper to push footer down */
@@ -410,34 +415,94 @@ footer {
   flex-wrap: wrap;
   background-color: var(--background-light);
 }
+/* Updated styling for the university cards to stack logo and info vertically */
 .university-card {
-  background-color: var(--accent-light);
-  border-radius: 10px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s;
-}
-.university-card:hover {
-  transform: translateY(-5px);
-}
-.university-card img {
-  max-width: 100px;
-  height: auto;
-  margin-bottom: 15px;
-}
-.university-card p {
-  color: var(--primary);
-  font-weight: bold;
-  margin: 0;
-}
-.university-card a {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  display: block;
   color: inherit;
+  display: flex; /* Makes the card a flex container */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally */
+  padding: 1.5rem;
 }
 
+.university-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* New styling for the logo container to control its size and centering */
+.university-logo-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.university-logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image fits without distortion */
+  border-radius: 8px; /* Optional: adds a slight border-radius for aesthetics */
+}
+
+/* Updated styling for the university info section */
+.university-info {
+  text-align: center; /* Centers the text */
+  width: 100%;
+}
+
+.university-info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.university-info p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.university-info .view-details-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.university-info .view-details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Back Link */
+.back-link {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
 /* === Karabük University Page Styling === */
 .university-page {
   background-color: var(--background-lighter);
@@ -1211,6 +1276,11 @@ footer {
   font-size: 0.95rem;
 }
 
+.program-details-full-page li strong {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
 /* View Details Button */
 .view-program-details-btn {
   display: inline-block;
@@ -1384,6 +1454,10 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
+  /* Updated to use flexbox for a stacked layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .university-card:hover {
@@ -1392,17 +1466,19 @@ footer {
 }
 
 .university-logo-container {
-  height: 150px;
+  /* Updated to give a fixed size for consistent logo display */
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 
 .university-logo-container img {
-  max-width: 80%;
+  /* Ensures the image fits within the container and maintains aspect ratio */
+  max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
