@@ -1,4 +1,5 @@
 ﻿id,name,country,type,logo,url,description
 karabuk-university,Karabük University,Turkey,Public,images/karabuk-university_logo.png,null,null
-bolu-abant-izzet-baysal-university,Bolu Abant İzzet Baysal University,Turkey,Public,images/bolu-abant-izzet-baysal-university_logo.png,null,null
-nisantasi-university,İstanbul Nişantaşı University,Turkey,Private,images/istanbul-nisantasi-university_logo.png,null,null
+bolu-abant-izzet-baysal-university,Bolu University,Turkey,Public,images/bolu-abant-izzet-baysal-university_logo.png,null,null
+nisantasi-university,Nişantaşı University,Turkey,Private,images/istanbul-nisantasi-university_logo.png,null,null
+kultur-university,Kültür University,Turkey,Private,images/kultur-university_logo.png,null,null
