@@ -23,6 +23,7 @@ university_detail_template = env.get_template('university_detail_template.html')
 program_detail_template = env.get_template('program_detail_template.html')
 country_private_template = env.get_template('private_country_template.html')
 country_public_template = env.get_template('public_country_template.html')
+index_template = env.get_template('index_template.html')
 
 # --- Load Data ---
 try:
@@ -56,7 +57,8 @@ for uni in universities_data:
     
     uni_programs = [p for p in programs_data if p['university_id'] == uni['id']]
     
-    sorted_programs = sorted(uni_programs, key=lambda x: int(x.get('priority', 9999)) if str(x.get('priority', '')).isdigit() else 9999)
+    # NEW: Sort the programs alphabetically by name
+    sorted_programs = sorted(uni_programs, key=lambda x: x.get('name', ''))
 
     uni['programs'] = []
     uni['priority_programs'] = []
@@ -68,6 +70,8 @@ for uni in universities_data:
         
         uni['programs'].append(program)
 
+        # Assuming you still want to show a few "priority" programs
+        # This part of the code might be re-evaluated depending on your needs
         if i < 4 and (program.get('priority') is not None and str(program.get('priority')).strip() != ''):
             uni['priority_programs'].append(program)
 
@@ -88,7 +92,7 @@ for uni in universities_data:
         'name': uni['name'],
         'slug': uni['slug'],
         'country_slug': slugify(country),
-        'logo': uni.get('logo'),  # Ensure logo is included
+        'logo': uni.get('logo'),
         'country': uni.get('country'),
         'type': uni.get('type'),
         'internal_url': uni.get('internal_url'),
@@ -106,12 +110,20 @@ if os.path.exists(OUTPUT_DIR):
     shutil.rmtree(OUTPUT_DIR)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+index_output_path = 'index.html'
+with open(index_output_path, 'w', encoding='utf-8') as f:
+    f.write(index_template.render(
+        country_universities_by_type=country_universities_by_type,
+        relative_path_prefix=ROOT_PREFIX
+    ))
+print(f"Generated {index_output_path}")
+
 explore_output_path = 'explore.html'
 with open(explore_output_path, 'w', encoding='utf-8') as f:
     f.write(explore_template.render(
         relative_path_prefix=ROOT_PREFIX,
         country_universities_by_type=country_universities_by_type,
-        all_countries=sorted(list(universities_df['country'].unique())) 
+        all_countries=sorted(list(universities_df['country'].unique()))
     ))
 print(f"Generated {explore_output_path}")
 
@@ -133,7 +145,7 @@ for uni in universities_data:
             country_universities_by_type=country_universities_by_type,
             relative_path_prefix=THREE_LEVEL_PREFIX
         ))
-    print(f"    Generated {uni_page_path}")
+    print(f"    Generated {uni_page_path}")
 
     for program in uni['programs']:
         program_filename = f"{program['slug']}.html"
@@ -149,7 +161,7 @@ for uni in universities_data:
                 country_universities_by_type=country_universities_by_type,
                 relative_path_prefix=THREE_LEVEL_PREFIX
             ))
-        print(f"      Generated {program_path}")
+        print(f"      Generated {program_path}")
 
 # --- Generate country-specific private/public HTML files (CORRECTED) ---
 country_types = {}
@@ -178,7 +190,7 @@ for country_slug, types_exist in country_types.items():
                 country_universities_by_type=country_universities_by_type,
                 relative_path_prefix=TWO_LEVEL_PREFIX
             ))
-        print(f"  Generated {private_path}")
+        print(f"  Generated {private_path}")
     
     if types_exist['public']:
         public_filename = f"public-{country_slug}.html"
@@ -191,6 +203,6 @@ for country_slug, types_exist in country_types.items():
                 country_universities_by_type=country_universities_by_type,
                 relative_path_prefix=TWO_LEVEL_PREFIX
             ))
-        print(f"  Generated {public_path}")
+        print(f"  Generated {public_path}")
 
 print("\nHTML generation complete!")

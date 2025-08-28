@@ -1701,3 +1701,86 @@ footer {
     padding: 20px;
   }
 }
+
+/* --- University Programs Card Layout --- */
+
+.programs-grid {
+    display: grid;
+    /* Creates a responsive grid with columns that are a minimum of 300px wide. */
+    /* They'll grow and shrink to fit the available space, creating multiple columns on larger screens. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Spacing between the cards */
+    margin-top: 2rem;
+}
+
+.program-card-link {
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Inherits the text color from its parent */
+}
+
+.program-card {
+    background-color: var(--card-bg); /* Use your defined color variable */
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.program-card:hover {
+    transform: translateY(-5px); /* Lifts the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--heading);
+}
+
+.program-card p {
+    margin: 0.5rem 0;
+    color: var(--text-muted);
+}
+
+/* --- University Programs Search & Filter --- */
+
+.search-and-filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 1rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+#programSearch,
+#degreeFilter {
+    flex: .75; /* Allows the elements to grow and take up space */
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--background-lighter);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#programSearch:focus,
+#degreeFilter:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--accent); /* Adds a focus ring */
+}
+
+/* Media query for smaller screens to ensure a stacked layout */
+@media (max-width: 768px) {
+    .search-and-filters-container {
+        flex-direction: column;
+    }
+    
+    #programSearch,
+    #degreeFilter {
+        width: 100%;
+    }
+}
