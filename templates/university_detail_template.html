@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="{{ relative_path_prefix }}style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     {% include 'header_template.html' with context %}
-    
+
     <main class="university-full-detail-page-main">
         <div class="container">
             <div class="uni-header">
@@ -25,25 +26,25 @@
 
             <section class="programs-section">
                 <h2>All Available Programs</h2>
-                <div class="programs-list-collapsible">
+                
+                <div class="search-and-filters-container">
+                    <input type="text" id="programSearch" placeholder="Search programs...">
+                    <select id="degreeFilter">
+                        <option value="all">All Degrees</option>
+                        </select>
+                </div>
+                
+                <div class="programs-grid" id="programsGrid">
                     {% if university.programs %}
                         {% for program in university.programs %}
-                            <div class="program-item-full-page">
-                                <h3 class="program-title-full-page">
-                                    {{ program.name }} ({{ program.degree | capitalize }})
-                                    <i class="fas fa-chevron-down toggle-icon-full-page"></i>
-                                </h3>
-                                <div class="program-details-full-page">
-                                    <p><strong>Overview:</strong> {{ program.details | default('No overview available.') }}</p>
-                                    <ul>
-                                        {% if program.duration %}<li><strong>Duration:</strong> {{ program.duration }}</li>{% endif %}
-                                        {% if program.language %}<li><strong>Language:</strong> {{ program.language }}</li>{% endif %}
-                                        {% if program.requirements %}<li><strong>Requirements:</strong> {{ program.requirements }}</li>{% endif %}
-                                        {% if program.tuition %}<li><strong>Tuition Fee:</strong> {{ program.tuition }}</li>{% endif %}
-                                    </ul>
-                                    <a href="{{ program.internal_url }}" class="view-program-details-btn">View Full Program Details</a>
+                            <a href="{{ relative_path_prefix }}unis/{{ university.country | slugify }}/{{ university.slug }}/{{ program.slug }}.html" class="program-card-link">
+                                <div class="program-card" data-name="{{ program.name | lower }}" data-degree="{{ program.degree | lower }}">
+                                    <h3>{{ program.name }}</h3>
+                                    <p class="program-degree"><strong>Degree:</strong> {{ program.degree | capitalize }}</p>
+                                    <p class="program-language"><strong>Language:</strong> {{ program.language }}</p>
+                                    <p class="program-tuition"><strong>Tuition:</strong> {{ program.tuition }}</p>
                                 </div>
-                            </div>
+                            </a>
                         {% endfor %}
                     {% else %}
                         <p>No programs listed for this university yet.</p>
@@ -57,23 +58,56 @@
         <p>&copy; 2025 Kola El Bahari Consulting. All rights reserved.</p>
     </footer>
 
-    <script src="{{ relative_path_prefix }}main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const programItems = document.querySelectorAll('.program-item-full-page');
-            programItems.forEach(item => {
-                const title = item.querySelector('.program-title-full-page');
-                const details = item.querySelector('.program-details-full-page');
-                const toggleIcon = item.querySelector('.toggle-icon-full-page');
+            const programSearchInput = document.getElementById('programSearch');
+            const degreeFilter = document.getElementById('degreeFilter');
+            const programsGrid = document.getElementById('programsGrid');
+            const programs = Array.from(document.querySelectorAll('.program-card'));
 
-                if (title && details && toggleIcon) {
-                    title.addEventListener('click', () => {
-                        details.classList.toggle('active');
-                        toggleIcon.classList.toggle('fa-chevron-up');
-                        toggleIcon.classList.toggle('fa-chevron-down');
-                    });
-                }
-            });
+            // Function to populate the degree filter
+            function populateDegreeFilter() {
+                const degrees = new Set();
+                programs.forEach(card => {
+                    degrees.add(card.dataset.degree);
+                });
+
+                degreeFilter.innerHTML = '<option value="all">All Degrees</option>';
+                Array.from(degrees).sort().forEach(degree => {
+                    const option = document.createElement('option');
+                    option.value = degree;
+                    option.textContent = degree.charAt(0).toUpperCase() + degree.slice(1);
+                    degreeFilter.appendChild(option);
+                });
+            }
+
+            // Function to filter programs
+            function filterPrograms() {
+                const searchTerm = programSearchInput.value.toLowerCase();
+                const selectedDegree = degreeFilter.value.toLowerCase();
+
+                programs.forEach(card => {
+                    const programName = card.dataset.name;
+                    const programDegree = card.dataset.degree;
+                    const matchesSearch = programName.includes(searchTerm);
+                    const matchesDegree = selectedDegree === 'all' || programDegree === selectedDegree;
+
+                    if (matchesSearch && matchesDegree) {
+                        card.closest('.program-card-link').style.display = 'block';
+                    } else {
+                        card.closest('.program-card-link').style.display = 'none';
+                    }
+                });
+            }
+
+            // Event listeners for filtering
+            if (programSearchInput) programSearchInput.addEventListener('input', filterPrograms);
+            if (degreeFilter) degreeFilter.addEventListener('change', filterPrograms);
+
+            // Initial setup
+            if (programsGrid) {
+                populateDegreeFilter();
+            }
         });
     </script>
 </body>
