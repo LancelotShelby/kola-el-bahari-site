@@ -83,7 +83,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--accent);
+  color: var(--heading);
 }
 
 /* Dropdown menu */
@@ -1036,6 +1036,7 @@ footer {
 
 .filters {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
@@ -1752,12 +1753,12 @@ footer {
     gap: 1rem;
     margin: 2rem 0;
     align-items: center;
+    justify-self: center;
 }
 
 #programSearch,
 #degreeFilter {
-    flex: .75; /* Allows the elements to grow and take up space */
-    padding: 0.8rem 1rem;
+    padding: 1rem 1rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 1rem;
