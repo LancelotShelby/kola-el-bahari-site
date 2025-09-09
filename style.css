@@ -1708,6 +1708,11 @@ footer {
     border-radius: 5px;
     margin-top: 5px;
   }
+  
+  nav ul .dropdown-menu, nav ul .sub-menu {
+    display: none; /* Hide the list items */
+    flex-direction: column; /* Stack them vertically if they do appear */
+  }
 }
 
 /* --- Mobile Devices (Up to 768px) --- */
@@ -1763,7 +1768,7 @@ footer {
     font-size: 1.2rem;
     padding: 1rem 1.5rem;
   }
-  nav ul {
+  nav ul .dropdown-menu, nav ul .sub-menu {
     display: none; /* Hide the list items */
     flex-direction: column; /* Stack them vertically if they do appear */
   }
@@ -1782,7 +1787,7 @@ footer {
   #modalProgramContent p, #modalProgramContent li {
     font-size: 0.9rem;
   }
-  nav ul {
+  nav ul .dropdown-menu, nav ul .sub-menu {
     display: none; /* Hide the list items */
     flex-direction: column; /* Stack them vertically if they do appear */
   }
@@ -1813,7 +1818,7 @@ footer {
     padding: 20px;
   }
 
-  nav ul {
+  nav ul .dropdown-menu, nav ul .sub-menu {
     display: none; /* Hide the list items */
     flex-direction: column; /* Stack them vertically if they do appear */
   }
