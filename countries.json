@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Turkey",
+    "slug": "turkey",
+    "description": "Turkey is a transcontinental country known for its rich history, vibrant culture, and growing economy. It's a popular destination for international students due to its affordable tuition fees and a wide range of academic programs.",
+    "visa_info": "Students from most countries will need to apply for a student visa at a Turkish embassy or consulate. A letter of final acceptance from a university is required for the application.",
+    "living_costs": "The cost of living in Turkey is relatively low compared to many European countries. Monthly expenses for a student can range from $300 to $1000, depending on the city and lifestyle.",
+    "public_requirements": {
+      "application_docs": [
+        "High School Diploma (original and notarized translation)",
+        "High School Transcript",
+        "Valid Passport",
+        "Language Proficiency Certificate (TOEFL or equivalent)",
+        "YÖS or SAT scores (if required by the university)"
+      ],
+      "other_info": "The requirements for public universities in Turkey ."
+    },
+    "private_requirements": {
+      "application_docs": [
+        "High School Diploma (English or Turkish, or a notarized translation in case the original is in another language)",
+        "High School Transcript",
+        "Valid Passport with a validity of at least 6 months"
+      ],
+      "other_info": "Private universities often have more flexible admission criteria and shorter application windows. They may also offer scholarships based on academic merit."
+    }
+  }
+]
