@@ -87,7 +87,9 @@ function displayUniversities(universitiesToShow, searchCriteria = {}) {
                     }
                 });
             }
-            const degreesText = Array.from(offeredDegrees).map(d => d.charAt(0).toUpperCase() + d.slice(1)).join(', ');
+                        // NEW: Convert the Set to an Array, sort it alphabetically, then format the string.
+            const sortedDegrees = Array.from(offeredDegrees).sort();
+            const degreesText = sortedDegrees.map(d => d.charAt(0).toUpperCase() + d.slice(1)).join(', ');
 
             cardHtml = `
                 <a href="${uni.explore_url}" class="university-card-link">
