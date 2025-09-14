@@ -58,7 +58,7 @@ function displayUniversities(universitiesToShow, searchCriteria = {}) {
         if (matchingPrograms.length > 0) {
             // Scenario 1: Display university with matching programs
             const programsListHtml = matchingPrograms.map(prog => 
-                `<li class="program-item">${prog.name} (${prog.degree}) (${prog.tuition || 'N/A'})</li>`
+                `<li class="program-item">${prog.name} (${prog.degree}) (${prog.language || 'N/A'}) (${prog.tuition || 'N/A'})</li>`
             ).join('');
 
             cardHtml = `
