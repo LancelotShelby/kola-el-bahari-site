@@ -11526,7 +11526,7 @@
                 "degree": "Bachelor",
                 "language": "Turkish",
                 "duration": "5 Years",
-                "tuition": null,
+                "tuition": "140,000 TL",
                 "requirements": null,
                 "details": null,
                 "priority": null,
@@ -25704,4 +25704,5 @@
         "explore_url": "unis/turkey/trakya-university/trakya-university_university.html",
         "explore_logo": "images/trakya-university_logo.png"
     }
+
 ]
