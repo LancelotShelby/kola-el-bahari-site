@@ -19095,7 +19095,7 @@
                 "degree": "Bachelor",
                 "language": "Turkish",
                 "duration": "5 Years",
-                "tuition": null,
+                "tuition": "140,000 TL",
                 "requirements": null,
                 "details": null,
                 "priority": null,
@@ -25706,3 +25706,4 @@
     }
 
 ]
+
